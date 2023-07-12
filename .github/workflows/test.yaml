@@ -7,18 +7,26 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+
       - uses: actions/setup-java@v3
         with:
           distribution: 'zulu'
           java-version: '17'
+
       - uses: Xotabu4/selenoid-github-action@v2
+
+      - name: Make backend_decrypt.sh executable
+        run: git update-index --chmod=+x ./.github/scripts/backend_decrypt.sh
+
       - run: ./gradlew clean test -Dselenide.remote=http://localhost:4444/wd/hub
+
       - uses: actions/checkout@v2
         if: always()
         continue-on-error: true
         with:
           ref: gh-pages
           path: gh-pages
+
       - uses: simple-elf/allure-report-action@master
         if: always()
         with:
@@ -26,6 +34,7 @@ jobs:
           allure_results: build/allure-results
           allure_report: allure-report
           allure_history: allure-history
+
       - uses: peaceiris/actions-gh-pages@v2
         if: always()
         env:
