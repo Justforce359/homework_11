@@ -1,0 +1,4 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Thu Jul 13 07:17:31 GMT 2023","Thu Jul 13 07:17:36 GMT 2023","5252","","com.justforge359.LambdaStepsTest","","com.justforge359.LambdaStepsTest","testLambdaStepsAllure","Создание Issue для авторизованного пользователя",""
+"passed","Thu Jul 13 07:17:24 GMT 2023","Thu Jul 13 07:17:31 GMT 2023","7336","","com.justforge359.AnnotatedStepsTest","","com.justforge359.AnnotatedStepsTest","testWithAnnotaited","Создание Issue для авторизованного пользователя",""
+"passed","Thu Jul 13 07:17:36 GMT 2023","Thu Jul 13 07:17:40 GMT 2023","3657","","com.justforge359.SimpleSelenideTest","","com.justforge359.SimpleSelenideTest","testIssueSearch","Создание Issue для авторизованного пользователя",""
