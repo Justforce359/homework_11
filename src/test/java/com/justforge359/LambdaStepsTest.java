@@ -1,8 +1,6 @@
 package com.justforge359;
 
-import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.*;
-import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -13,9 +11,7 @@ import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 import static org.openqa.selenium.By.linkText;
 
-public class LambdaStepsTest {
-    private static final String REPOSITORY = "Justforce359/homework_11";
-    private static final String ISSUENAME = "Some issue";
+public class LambdaStepsTest extends BaseTest {
 
     @Test
     @Feature("Issue в репозитории")
@@ -25,8 +21,6 @@ public class LambdaStepsTest {
     @Link(value = "Testing", url = "https://testing.github.com")
     @DisplayName("Создание Issue для авторизованного пользователя")
     public void testLambdaStepsAllure() {
-        SelenideLogger.addListener("allure", new AllureSelenide());
-
         step("Открываем главную страницу", () -> {
             open("https://github.com/");
         });

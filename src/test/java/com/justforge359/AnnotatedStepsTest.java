@@ -6,13 +6,8 @@ import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
-import static io.qameta.allure.Allure.step;
+public class AnnotatedStepsTest extends BaseTest {
 
-public class AnnotatedStepsTest {
-    private static final String REPOSITORY = "Justforce359/homework_11";
-    private static final String ISSUENAME = "Some issue";
     @Test
     @Feature("Issue в репозитории")
     @Story("Создание Issue")
